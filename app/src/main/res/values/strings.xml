@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GitHubApp</string>
+    <string name="users_top_app_bar_text">Home</string>
+    <string name="users_top_app_search_text">Buscar</string>
+    <string name="user_profile_image_description">User profile image</string>
+    <string name="back_button_text">Voltar</string>
+    <string name="followers_count_text">%d Seguidores</string>
+    <string name="following_count_text">%d Seguindo</string>
+    <string name="clear_search">Limpar busca</string>
+    <string name="search_bar_label_text">Buscar por nome de usuário</string>
+    <string name="search_result_count">%1$s resultados</string>
+    <string name="unavailable_content_text">Conteúdo indisponivel</string>
+    <string name="not_found_content_text">Conteúdo não encontrado</string>
+    <string name="too_much_requests_content_text">Muitas solicitações</string>
+    <string name="no_internet_connection_text">Verifique sua conexão de internet</string>
+    <string name="unknown_error_text">Erro desconhecido</string>
+    <string name="retry_button_text">Retry</string>
+    <string name="empty_screen_text">Nenhum conteudo por aqui...</string>
+    <string name="alert_icon_text_description">Alert icon</string>
+</resources>
