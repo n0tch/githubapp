@@ -19,11 +19,12 @@
   - Gson
   - OkHttp Logging
 - Unit Tests
-  - Mockk
+  - [Mockk](https://mockk.io/ANDROID.html)
   - JUnit4
   - Kotlin Coroutine Tests
+  - [Turbine](https://github.com/cashapp/turbine)
 - Instrumented Tests
-  - Compose UI Test
+  - [Compose UI Test](https://developer.android.com/jetpack/compose/testing)
 
 ## Simple App Architecture Visualization
 
@@ -39,5 +40,4 @@
 - To run the app just hit play in AS
 - To run unit tests `./gradlew test` or run the gradle `testDebugUnitTest` task on AS UI 
 - To run instrumented tests `./gradlew connectedAndroidTest` or run the gradle `connectedDebugAndroidTest` task on AS UI
-- There is no needed to configure any other setting
 
