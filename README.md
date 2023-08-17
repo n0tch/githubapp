@@ -26,9 +26,21 @@
 - Instrumented Tests
   - [Compose UI Test](https://developer.android.com/jetpack/compose/testing)
 
-## Simple App Architecture Visualization
+## App Modules Organization
 
 ![app_architecture](img/github-app.png)
+
+The Home App consume only the `features/navigation` package. This package is responsible for launch screens based on navigation.
+The `features/users` and `features/detail` use the `UserRepository` to consume the `RemoteDataSource` and have access to the GitHub data.
+The UserRepository is an interface that have an injection of `RemoteDataSource` on it.
+
+## App Architecture Overview
+
+![app_arch_overview](img/mad-arch-overview-data.png)
+
+This is a Google recommendation architecture and I used it in this project.
+The `UILayer` calls DataLayer directly because there was no business rule to be applied on, so I skipped this layer.
+The `DataLayer` have some repositories and those calls `RemoteDataSources` to fetch data into the app.
 
 ## Instructions to run
 
