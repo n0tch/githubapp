@@ -1,5 +1,6 @@
 package com.example.githubapp.di
 
+import com.example.githubapp.BuildConfig
 import com.example.githubapp.data.api.RemoteDataSource
 import dagger.Module
 import dagger.Provides
@@ -30,7 +31,7 @@ object RemoteDataSourceModule {
             val request = chain
                 .request()
                 .newBuilder()
-                .addHeader(AUTHORIZATION_HEADER, "Bearer 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")
+                .addHeader(AUTHORIZATION_HEADER, "Bearer ${BuildConfig.GITHUB_TOKEN}")
                 .build()
 
             chain.proceed(request)

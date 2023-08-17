@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -5,9 +8,16 @@ plugins {
     id("com.google.dagger.hilt.android")
 }
 
+val properties = Properties().apply {
+    load(FileInputStream("${project.rootDir}/credential.properties"))
+    project.ext.set("github_api_credential", getProperty("githubToken") ?: "")
+}
+
 android {
     namespace = "com.example.githubapp"
     compileSdk = 33
+
+    buildFeatures.buildConfig = true
 
     defaultConfig {
         applicationId = "com.example.githubapp"
@@ -33,6 +43,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            buildConfigField("String", "GITHUB_TOKEN", "\"${project.ext.get("github_api_credential").toString()}\"")
+        }
+
+        debug{
+            buildConfigField("String", "GITHUB_TOKEN", "\"${project.ext.get("github_api_credential").toString()}\"")
         }
     }
     compileOptions {
