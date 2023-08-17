@@ -31,6 +31,9 @@
 
 ## Instructions to run
 
+- Add your github personal key to the file `credential.properties`
+  - This file have a key called `githubToken` and you need to add your key in there. Otherwise, the app could not work as expected.
+
 - Make sure you have Java17 installed
   - If not, go to File -> Settings -> Search for Gradle -> on Gradle SDK select any Java17 option
 - To run the app just hit play in AS
